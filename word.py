@@ -10,11 +10,11 @@ from bs4 import BeautifulSoup
 # Date formatting for posts.
 
 date = datetime.datetime.now()
-formatted_date = date.strftime("%x") # Local format 04/01/2022.
+formatted_date = date.strftime("%x") # Local format. (04/01/2022)
 
 results = [] # Common words gathered from all sites.
 
-exclusions = ["the", "to", "of", "and", "&", "because", "in", "there", "there's", "for", "has", "that", "on", "with", "an", "say", "on", "i", "we", "know", "me", "who", "guardian", "uk", "us", "as", "a", "all", "–", "at", "us", "world", "exclusive", "it", "is", "stories", "from", "after", "over", "not", "how", "his", "was", "her", "he", "by", "be", "-", "says", "she", "ft", "will", "are", "into", "their", "have", "And", "its", "were", "—", "had", "said", "this", "when", "out", "you", "about", "About", "your", "up", "they", "been", "which", "while", "best", "the...", "here's", "or", "off", "before", "now", "want", "last", "also", "ukraine", "|"]
+exclusions = ["the", "to", "of", "and", "&", "because", "in", "there", "there's", "for", "has", "that", "on", "with", "an", "say", "on", "i", "we", "know", "me", "who", "guardian", "uk", "us", "as", "a", "all", "–", "at", "us", "world", "exclusive", "it", "is", "stories", "from", "after", "over", "not", "how", "his", "was", "her", "he", "by", "be", "-", "says", "she", "ft", "will", "are", "into", "their", "have", "And", "its", "were", "—", "had", "said", "this", "when", "out", "you", "about", "About", "your", "up", "they", "been", "which", "while", "best", "the...", "here's", "or", "off", "before", "now", "want", "last", "also", "ukraine", "|", "russian", "smith"]
 
 #---------------------------------------------------
 
@@ -45,7 +45,7 @@ def main(url, classID, ele):
 def validate():
     word = max(set(results), key = results.count) # Common word from all words collected.
     print(f"{formatted_date}: {word}")
-    confirm = input("Would you like to post this word to Twitter and Reddit?") # Double check validity.
+    confirm = input("Would you like to post this word to Twitter and Reddit?: ") # Double check validity.
     if confirm == "y":
         try:
             
@@ -71,6 +71,7 @@ def validate():
             user_agent = config.USER_AGENT
             )
 
+            reddit.validate_on_submit = True
             reddit.subreddit("commonword").submit(f"{formatted_date}", f"{word}")
 
         except:
