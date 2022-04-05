@@ -14,7 +14,7 @@ formatted_date = date.strftime("%x") # Local format. (04/01/2022)
 
 results = [] # Common words gathered from all sites.
 
-exclusions = ["the", "to", "of", "and", "&", "because", "in", "there", "there's", "for", "has", "that", "on", "with", "an", "say", "on", "i", "we", "know", "me", "who", "guardian", "uk", "us", "as", "a", "all", "–", "at", "us", "world", "exclusive", "it", "is", "stories", "from", "after", "over", "not", "how", "his", "was", "her", "he", "by", "be", "-", "says", "she", "ft", "will", "are", "into", "their", "have", "And", "its", "were", "—", "had", "said", "this", "when", "out", "you", "about", "About", "your", "up", "they", "been", "which", "while", "best", "the...", "here's", "or", "off", "before", "now", "want", "last", "also", "ukraine", "|", "russian", "smith"]
+exclusions = ["the", "to", "of", "and", "&", "because", "in", "there", "there's", "for", "has", "that", "on", "with", "an", "say", "on", "i", "we", "know", "me", "who", "guardian", "uk", "us", "as", "a", "all", "–", "at", "us", "world", "exclusive", "it", "is", "stories", "from", "after", "over", "not", "how", "his", "was", "her", "he", "by", "be", "-", "says", "she", "ft", "will", "are", "into", "their", "have", "And", "its", "were", "—", "had", "said", "this", "when", "out", "you", "about", "About", "your", "up", "they", "been", "which", "while", "best", "the...", "here's", "or", "off", "before", "now", "want", "last", "also", "ukraine", "ukrainian", "|", "russia", "russian", "smith", "but", "our", "vs", "war", "than", "one", "do", "new", "being", "take", "my", "more", "calls", "found", "get", "ahead", "conversion", "channel", "boris", "first", "why", "can"]
 
 #---------------------------------------------------
 
